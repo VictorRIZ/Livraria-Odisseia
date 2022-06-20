@@ -1,5 +1,7 @@
 # Informações sobre o reposítorio
 
+<img src="images/imagemReadme.jpg" alt="Projeto de E-commerce">
+
 O reposítorio é resultado da atividade A3 da universidade São Judas Tadeu, onde o tema desse semestre no curso de ADS era sobre e-commerce. 
 Os grupos tinham que criar um projeto sobre algo relacionado a isso. Não era necessário criar um código, apenas aplicar os ensinamentos sobre diagramas, questões de qualidade de software, etc.... Porém nosso grupo decidiu aplicar o código para consolidar alguns conhecimentos.
 
