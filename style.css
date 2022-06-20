@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --red-odisseia: rgb(255, 46, 46);
+    --orange-odisseia: rgb(253, 253, 24);
+    --madeira-odisseia: rgb(179, 59, 11);
+    --madeira-escura: rgba(117, 33, 0, 0.7);
+    --gray-odisseia: rgba(189, 189, 189, 0.596);
+    --sombra-odisseia: rgba(0, 0, 0, 0.363);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+body{
+    font-size: 2rem;
+}
+
+/*Navegação*/
+/*Mobile First*/
+#navigation{
+    display: grid;
+    background: brown;
+}
+
+#navigation .initial{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigation .initial .name-logo a{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: var(--red-odisseia)
+}
+
+#navigation .initial .search input {
+    outline: none;
+    padding-inline: .3rem;
+    padding-block: .5rem;
+}
+
+#navigation .initial .search .submit{
+    padding: .5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 68%;
+    bottom: 91%;
+    z-index: 10;
+}
+
+#navigation .initial .search .submit i{
+    font-size: 2rem;
+}
+.extras {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.extras ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+a .login{
+    width: 5rem;
+}
+.fa-solid.fa-cart-shopping{
+    font-size: 3rem;
+}
+
+#navigation .menu{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 1rem;
+    background: orange;
+}
+
+#navigation .menu li a{
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: var(--orange-odisseia) ;
+}
+
+/*Initial section(carousel with bootstrap)*/
+.container-fluid{
+    padding: 0;
+    background: transparent;
+    top: 10%;
+}
+#mainSlider.carousel-control-prev{
+   right: 10%;
+}
+
+#mainSlider .carousel-caption{
+    top: 90%;
+}
+
+#mainSlider.carousel-control-next{
+    left: 10%;
+}
+
+#mainSlider .carousel-item img{
+    height: 50rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.main-btn{
+    position: relative;
+    text-decoration: none;
+    border: 1px solid var(--madeira-odisseia);
+    background-color: var(--madeira-odisseia); 
+    color: #fff; 
+    width: 20rem; 
+    height: 6rem; 
+    padding: 1rem 2rem; 
+    border-radius: 3rem; 
+    transition: .5s;
+    bottom: 3rem;
+}
+
+.main-btn:hover{
+    background: var(--madeira-escura);
+    color: white;
+
+}
+/*Sobre*/
+
+#about{
+    display: grid;
+}
+
+#about .content{
+    display: grid;
+    place-items: center;
+}
+
+.content .title{
+    text-align: center;
+}
+
+#about .image-about{
+    margin-block: 3rem;
+}
+
+/*Livros*/
+
+#book{
+    display: grid;
+    place-items: center;
+    background: rgba(136, 27, 0, 0.527); 
+}
+
+.books{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    flex-wrap: wrap; 
+}
+
+.books .card{
+    position: relative; 
+    width: 32rem; 
+    height: 42rem; 
+    background: var(--madeira-odisseia);
+    border-radius: 2rem; 
+    margin: 4rem; 
+    overflow: hidden;
+}
+
+.card::before{
+    content: ''; 
+    position: absolute; 
+    top: -50%; 
+    width: 100%; 
+    height: 100%; 
+    background: var(--madeira-escura); 
+    transform: skewY(345deg); 
+    transition: 0.5s;
+}
+
+.card:hover::before{
+    top: -70%; 
+    transform: skewY(390deg);
+}
+
+.card::after{
+    content: 'Odisseia'; 
+    position: absolute; 
+    bottom: 10%; 
+    left: 0; 
+    font-weight: 600; 
+    font-size: 4em; 
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.card .imgBx{
+    position: relative; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 2rem; 
+    z-index: 1;
+}
+
+.card .imgBx img{
+    max-width: 100%; 
+    transition: 0.5s;
+}
+
+.card:hover .imgBx img{
+    max-width: 50%
+}
+
+.card .contentBx{
+    position: relative; 
+    padding: 2rem; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    z-index: 1;
+}
+
+.card .contentBx h3{
+    font-size: 1.8rem; 
+    color: aliceblue; 
+    font-weight: 500; 
+    text-transform: uppercase; 
+    letter-spacing: .1rem;
+}
+
+.card .contentBx .price{
+    font-size: 2.4rem; 
+    color: aliceblue; 
+    font-weight: 500; 
+    letter-spacing: .1rem;
+}
+
+.card .contentBx .buy{
+    position: relative; 
+    top: 20rem; 
+    opacity: 0; 
+    padding: 1rem 3rem; 
+    margin-top: 1.5rem; 
+    color: aliceblue; 
+    text-decoration: none; 
+    background: black;
+    border-radius: 3rem; 
+    text-transform: uppercase; 
+    letter-spacing: .1rem; 
+    transition: 0.5s;
+}
+
+.card .contentBx .buy.b{
+    margin-top: .1rem;
+}
+
+.card:hover .contentBx .buy{
+    top: 0; 
+    opacity: 1;
+}
+
+/*References*/
+#references{
+    display: grid;
+    place-items: center;
+}
+
+.people{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 30rem;
+    margin: 5%;
+}
+
+
+.people .first{
+    display: grid;
+    place-items: center;
+    width: 42rem;
+    height: 20rem; 
+    background: var(--gray-odisseia);
+    border-radius: 1rem; 
+    margin: 2rem;
+    box-shadow: 0 0 .5rem var(--gray-odisseia),
+    0 0 .5rem var(--gray-odisseia),
+    0 0 .5rem var(--gray-odisseia),
+    0 0 .5rem var(--gray-odisseia);
+}
+
+.people h1{
+    font-size: 4rem;
+}
+
+/*Footer*/
+
+footer{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    background: var(--madeira-odisseia);
+    color: black;
+}
+
+footer h2{
+    font-size: 2rem;
+}
+
+footer a{
+    font-size: 5rem;
+    text-decoration: none;
+    color: black;
+    transition: .3s
+}
+
+.fa-linkedin:hover{
+    color: rgb(45, 45, 255);
+}
+
+
+/*Voltar ao topo*/
+
+#returnToTop{
+    position: fixed;
+    right: 2rem;
+    bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--madeira-escura);
+    color: #fff;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    text-decoration: none;
+    visibility: hidden;/*No começo, ele ficará invisível. Após adicionar
+    o .show nele(através do JS, ficará visível novamente)*/
+    transform: translateY(100%);
+    transition: .5s;
+
+}
+
+
+#returnToTop.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+/*Responsividade*/
+@media (min-width: 1024px){
+
+#navigation .initial .search .submit{
+    position: initial;
+}
+
+.extras {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.image-about img{
+    width: 50rem;
+}
+
+#navigation .initial .search input {
+    padding-inline: 15rem;
+}
+
+#references .container{
+    display: grid;
+    
+}
+
+.people{
+    width: 30%;
+}
+
+}
+
+@media (min-width: 720px){
+
+#navigation .initial .search input {
+    padding-inline: 12rem;
+}
+    
+#navigation .initial .search .submit{
+    left: 78%;
+    bottom: 91%;
+}
+
+
+}
+
+
+
+
+
